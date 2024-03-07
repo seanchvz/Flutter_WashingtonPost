@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title:
-            Text('The Washington Post', style: TextStyle(color: Colors.white)),
+            Text('The Washington Post', style: TextStyle(color: Colors.white), ),
         centerTitle: true,
     ),
     
@@ -48,78 +48,77 @@ class LoginScreen extends StatelessWidget {
                             SizedBox( // para naay gap idk how padding works :P
                               height: 16, //
                             ),
-                            Container(
-                              height: 45,
-                              width: 300,
-                              decoration: BoxDecoration(
-                                border: Border.all(width: 1, color: Colors.blue),
-                                color: Colors.grey[200],
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                Text(
-                                  'Email Address',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    color: Colors.blue,
-                                  ),
+                          Container(
+                            height: 45,
+                            width: 300,
+                            decoration: BoxDecoration(
+                              border: Border.all(width: 1, color: Colors.blue),
+                              color: Colors.grey[200],
+                              borderRadius: BorderRadius.circular(3),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.0),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none, 
+                                  hintText: 'Email Address',
+                                  hintStyle: TextStyle(fontSize: 12, color: Colors.blue),
                                 ),
-                                ]
+                                style: TextStyle(fontSize: 12, color: Colors.blue), 
                               ),
                             ),
+                          ),
+
                             SizedBox( // para naay gap idk how padding works :P
                               height: 16, //
                             ),
-ElevatedButton(
-      onPressed: () {
-  Navigator.pushNamed(context, '/home');
-},
-  style: ElevatedButton.styleFrom(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(50),
-    ),
-    primary: Colors.blue[500],
-    minimumSize: Size(300, 40),
-  ),
-  child: Text(
-    'Next',
-    style: TextStyle(
-      fontSize: 14,
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-),
+                          ElevatedButton(
+                                onPressed: () {
+                            Navigator.pushNamed(context, '/home');
+                          },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              primary: Colors.blue[500],
+                              minimumSize: Size(300, 40),
+                            ),
+                            child: Text(
+                              'Next',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
 
 
-SizedBox(
-  height: 16,
-),
-ElevatedButton(
-  onPressed: () {
+                          SizedBox(
+                            height: 16,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
 
-    print('Email a sign-in link');
-  },
-  style: ElevatedButton.styleFrom(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(50),
-    ),
-    primary: Colors.grey[200],
-    side: BorderSide(color: Colors.grey),
-    minimumSize: Size(300, 45),
-  ),
-  child: Text(
-    'Email a sign in link',
-    style: TextStyle(
-      fontSize: 14,
-      color: Colors.black,
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-),
+                              print('Email a sign-in link');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              primary: Colors.grey[200],
+                              side: BorderSide(color: Colors.grey),
+                              minimumSize: Size(300, 45),
+                            ),
+                            child: Text(
+                              'Email a sign in link',
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                             SizedBox( // para naay gap idk how padding works :P
                               height: 16, //
                             ),
