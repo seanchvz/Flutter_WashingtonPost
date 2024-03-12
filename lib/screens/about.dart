@@ -133,7 +133,7 @@ class About extends StatelessWidget {
                             leading: Icon(Icons.info),
                             title: Text('About'),
                             onTap: () {
-                              Navigator.pushNamed(context, '/about');
+                              // Navigator.pushNamed(context, '/about');
                             },
                           ),
                           ListTile(
@@ -170,7 +170,50 @@ class About extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 16.0),
+                            Image.asset('assets/logo.png'),
                             // Add your content here
+                            Text(
+                              '1. Reflecting on my first time developing with flutter, I have encountered many problems with decorating my respective screen but I was able to run the setup smoothly.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+
+                            Text(
+                              '2. The building and running experience with flutter has been very efficient for me, for it has the hot reload feature, which is a game changer when it comes to creating a web app. ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                            Text(
+                              '3. At first, I was puzzled when I started working on flutter. It is very different from any other software developing program, then using a Mac device for this subject gives me a learning gap. I had to learn as I do my projects, but in this current time, I am able to work with flutter the way I can be familiar with. ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                            Text(
+                              '4. the first bug was the time my running project keeps on crashing, then I feel assured since I was able to screen record my output as a backup. ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                            Text(
+                              '5. The first euraka moment is running the prject :D',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w200,
+                              ),
+                            ),
+                            
                           ],
                         ),
                       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sidebarx/sidebarx.dart';
+// import 'package:sidebarx/sidebarx.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
                             leading: Icon(Icons.home),
                             title: Text('Home'),
                             onTap: () {
-                              Navigator.pushNamed(context, '/home');
+                              // Navigator.pushNamed(context, '/home');
                             },
                           ),
                           ListTile(
@@ -153,28 +153,31 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Expanded(
-                    flex: 2,
-                    child: Card(
-                      margin: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Container(
-                        padding: EdgeInsets.all(16.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              'Home',
-                              style: TextStyle(
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 16.0),
-                            // Add your content here
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+Expanded(
+ flex: 2,
+ child: Card(
+    margin: EdgeInsets.symmetric(horizontal: 16.0),
+    child: Container(
+      padding: EdgeInsets.all(16.0),
+      child: Column(
+        children: [
+          Text(
+            'Chavez',
+            style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 16.0),
+          // Add your image here
+          Image.asset('assets/logo.png'), // Adjust the path as necessary
+          // Add your content here
+        ],
+      ),
+    ),
+ ),
+),
+
                 ],
               ),
             );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sidebarx/sidebarx.dart';
+// import 'package:sidebarx/sidebarx.dart';
 
 class NewsScreen extends StatelessWidget {
   @override
@@ -124,7 +124,7 @@ class NewsScreen extends StatelessWidget {
                             leading: Icon(Icons.newspaper),
                             title: Text('News'),
                             onTap: () {
-                              Navigator.pushNamed(context, '/news');
+                              // Navigator.pushNamed(context, '/news');
                             },
                           ),
                           ListTile(

@@ -139,7 +139,7 @@ class MyAccount extends StatelessWidget {
                             leading: Icon(Icons.person),
                             title: Text('My Account'),
                             onTap: () {
-                              Navigator.pushNamed(context, '/account');
+                              // Navigator.pushNamed(context, '/account');
                             },
                           ),
                           ListTile(

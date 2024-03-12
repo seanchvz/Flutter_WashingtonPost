@@ -99,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-
+                              Navigator.pushNamed(context, '/signup');
                               print('Email a sign-in link');
                             },
                             style: ElevatedButton.styleFrom(
