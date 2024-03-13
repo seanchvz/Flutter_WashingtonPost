@@ -8,6 +8,7 @@ class NewsScreen extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Text('News', style: TextStyle(color: Colors.white)),
         centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       drawer: MediaQuery.of(context).size.width <= 600 ? CustomDrawer() : null,
       body: Row(

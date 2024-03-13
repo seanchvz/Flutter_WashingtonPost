@@ -8,6 +8,7 @@ class MyAccount extends StatelessWidget {
         backgroundColor: Colors.black,
         title: Text('My Account', style: TextStyle(color: Colors.white)),
         centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       drawer: MediaQuery.of(context).size.width <= 600 ? CustomDrawer() : null,
       body: Row(
