@@ -210,7 +210,7 @@ class SignUp extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
-                              primary: Colors.blue[500],
+                              backgroundColor: Colors.blue[500],
                               minimumSize: Size(300, 40),
                             ),
                             child: Text(
