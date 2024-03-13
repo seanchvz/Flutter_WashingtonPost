@@ -14,6 +14,7 @@ class LoginScreen extends StatelessWidget {
         title:
             Text('The Washington Post', style: TextStyle(color: Colors.white), ),
         centerTitle: true,
+        
     ),
   
       body: Container(

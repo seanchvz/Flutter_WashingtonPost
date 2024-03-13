@@ -1,6 +1,35 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:chavez_1_login/models/card.dart';
+import 'package:chavez_1_login/widgets/card-widget.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  late Future<List<CardModel>> _fetchCards;
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchCards = _fetchData();
+  }
+
+  Future<List<CardModel>> _fetchData() async {
+    final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
+
+    if (response.statusCode == 200) {
+      List<dynamic> data = json.decode(response.body);
+      return data.map((item) => CardModel.fromJson(item)).toList();
+    } else {
+      throw Exception('Failed to load data');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,26 +49,23 @@ class HomeScreen extends StatelessWidget {
               : SizedBox(), // Empty placeholder for smaller screens
           Expanded(
             flex: 2,
-            child: Card(
-              margin: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Container(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    Text(
-                      'Chavez',
-                      style: TextStyle(
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 16.0),
-                    // Add your image here
-                    Image.asset('assets/logo.png'), // Adjust the path as necessary
-                    // Add your content here
-                  ],
-                ),
-              ),
+            child: FutureBuilder<List<CardModel>>(
+              future: _fetchCards,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else {
+                  return ListView.builder(
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      final card = snapshot.data![index];
+                      return cardWidget(card: card); // Pass CardModel object to cardWidget
+                    },
+                  );
+                }
+              },
             ),
           ),
         ],
