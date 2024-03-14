@@ -82,7 +82,7 @@ class LoginScreen extends StatelessWidget {
                               minimumSize: Size(300, 40),
                             ),
                             child: Text(
-                              'Next',
+                              'Login',
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.white,
@@ -98,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                           ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/signup');
-                              print('Email a sign-in link');
+                              print('Sign Up');
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
@@ -109,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                               minimumSize: Size(300, 45),
                             ),
                             child: Text(
-                              'Email a sign in link',
+                              'Sign Up',
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.black,

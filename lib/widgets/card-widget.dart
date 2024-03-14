@@ -19,6 +19,8 @@
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
+              
               Text(
                 card.title,
                 style: TextStyle(
